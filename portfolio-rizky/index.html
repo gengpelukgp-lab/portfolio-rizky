@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rizky Emraldy S — Futuristic Developer Portfolio | XI PPLG B</title>
+  <meta name="description"
+    content="Portfolio futuristik Rizky Emraldy S - Siswa XI PPLG B, Pengembangan Perangkat Lunak dan Gim. Future Developer passionate about web & android technology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Background layers -->
+  <div class="bg-base"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">RIZKY<span class="logo-dot">.</span>EMRALDY</span>
+        <span class="logo-bracket">]</span>
+        <span class="logo-ver">v2.6</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active"><span>00</span> HOME</a></li>
+        <li><a href="#about" class="nav-link"><span>01</span> ABOUT</a></li>
+        <li><a href="#skills" class="nav-link"><span>02</span> SKILLS</a></li>
+        <li><a href="#projects" class="nav-link"><span>03</span> PROJECTS</a></li>
+        <li><a href="#journey" class="nav-link"><span>04</span> JOURNEY</a></li>
+        <li><a href="#contact" class="nav-link"><span>05</span> CONTACT</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#contact" class="btn-nav-cta">HIRE SIGNAL <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <button id="hamburger" class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          SYSTEM ONLINE — PORTFOLIO XI PPLG B // 2026
+        </div>
+        <p class="hero-hello">HELLO, I'M</p>
+        <h1 class="hero-title">
+          <span class="hero-name">RIZKY EMRALDY S</span>
+          <span class="hero-typed-wrap"><span id="typedText"></span><span class="typed-cursor">|</span></span>
+        </h1>
+        <p class="hero-subtitle"><span>XI PPLG B</span> <span class="dot-sep">•</span> FUTURE DEVELOPER</p>
+        <p class="hero-desc">Siswa PPLG yang tertarik dengan pemrograman, teknologi, web development, dan pengembangan
+          project digital. Membangun masa depan lewat baris kode.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> EXPLORE PROJECT <span
+              class="btn-glow"></span></a>
+          <a href="#about" class="btn btn-ghost"><i class="fa-regular fa-user"></i> ABOUT ME</a>
+        </div>
+        <div class="hero-stats">
+          <div class="h-stat"><b>7+</b><span>Tech Stack</span></div>
+          <div class="h-stat"><b>2+</b><span>Projects</span></div>
+          <div class="h-stat"><b>∞</b><span>Curiosity</span></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="status-card">
+          <div class="status-header">
+            <span class="status-title"><i class="fa-solid fa-microchip"></i> SYSTEM STATUS</span>
+            <span class="status-online"><span class="pulse"></span> ONLINE</span>
+          </div>
+          <div class="status-grid">
+            <div class="status-item"><label>ROLE</label>
+              <p>PPLG STUDENT</p>
+            </div>
+            <div class="status-item"><label>CLASS</label>
+              <p>XI PPLG B</p>
+            </div>
+            <div class="status-item"><label>ABSEN</label>
+              <p>31</p>
+            </div>
+            <div class="status-item"><label>MAJOR</label>
+              <p>PPLG</p>
+            </div>
+            <div class="status-item"><label>STATUS</label>
+              <p class="accent">LEARNING</p>
+            </div>
+            <div class="status-item"><label>MODE</label>
+              <p>BUILDING</p>
+            </div>
+          </div>
+          <div class="status-footer">
+            <div class="progress-wrap">
+              <div class="progress-label"><span>LEARNING PROGRESS</span><span>87%</span></div>
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+            <code class="status-code">&gt; initializing_future.module<span class="blink">_</span></code>
+          </div>
+          <div class="scanline"></div>
+        </div>
+        <!-- decorative orbit -->
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator"><span></span>
+      <p>SCROLL</p>
+    </a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">01 // ABOUT ME</span>
+        <h2>Behind The <span class="grad-text">Code</span></h2>
+        <div class="head-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text-card glass">
+          <p class="about-p">Nama saya <b>Rizky Emraldy S</b>. Saya adalah siswa kelas <b>XI PPLG B</b> jurusan
+            Pengembangan Perangkat Lunak dan Gim (PPLG). Saya tertarik dengan dunia teknologi, pemrograman, dan
+            pengembangan website. Saya terus belajar dan mencoba berbagai project untuk meningkatkan kemampuan saya
+            dalam bidang teknologi.</p>
+          <div class="info-grid">
+            <div class="info-box"><label>NAME</label><span>Rizky Emraldy S</span></div>
+            <div class="info-box"><label>CLASS</label><span>XI PPLG B</span></div>
+            <div class="info-box"><label>ABSEN</label><span>31</span></div>
+            <div class="info-box"><label>MAJOR</label><span>PPLG</span></div>
+            <div class="info-box"><label>STATUS</label><span class="tag-online">● STUDENT</span></div>
+            <div class="info-box"><label>FOCUS</label><span>WEB & ANDROID</span></div>
+          </div>
+          <div class="about-tags">
+            <span><i class="fa-solid fa-code"></i> Clean Code</span>
+            <span><i class="fa-solid fa-lightbulb"></i> Problem Solver</span>
+            <span><i class="fa-solid fa-infinity"></i> Continuous Learner</span>
+          </div>
+        </div>
+        <div class="profile-wrap">
+          <div class="profile-frame">
+            <div class="profile-img-box">
+              <!-- Placeholder - ganti src dengan foto asli -->
+              <img id="profileImg"
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&h=600&fit=crop"
+                alt="Rizky Emraldy S">
+              <div class="profile-overlay"></div>
+              <div class="profile-scan"></div>
+              <div class="profile-corners">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="profile-label">
+              <span>IDENTITY_VERIFIED</span>
+              <span class="label-id">ID: PPLG-XI-B-31</span>
+            </div>
+          </div>
+          <div class="profile-meta">
+            <span>[ ACCESS GRANTED ]</span>
+            <span>RES: 1080x1920 • BIO: ENCRYPTED</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">02 // SKILLS</span>
+        <h2>Tech <span class="grad-text">Arsenal</span></h2>
+        <p class="section-desc">Teknologi yang sedang saya kuasai dan terus saya kembangkan</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+          <h3>HTML</h3>
+          <p>Web structure & semantic markup</p>
+          <div class="skill-bar"><span style="width:90%"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+          <h3>CSS</h3>
+          <p>Modern UI & responsive design</p>
+          <div class="skill-bar"><span style="width:88%"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+          <h3>JavaScript</h3>
+          <p>Interactive web functionality</p>
+          <div class="skill-bar"><span style="width:82%"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fa-brands fa-java"></i></div>
+          <h3>Java</h3>
+          <p>Programming fundamentals</p>
+          <div class="skill-bar"><span style="width:75%"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fa-brands fa-android"></i></div>
+          <h3>Android Studio</h3>
+          <p>Android application development</p>
+          <div class="skill-bar"><span style="width:70%"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fa-brands fa-github"></i></div>
+          <h3>Git & GitHub</h3>
+          <p>Version control & repository</p>
+          <div class="skill-bar"><span style="width:80%"></span></div>
+        </div>
+        <div class="skill-card featured">
+          <div class="skill-icon"><i class="fa-solid fa-cube"></i></div>
+          <h3>Three.js</h3>
+          <p>3D web development</p>
+          <div class="skill-bar"><span style="width:65%"></span></div>
+          <span class="skill-badge">LEARNING</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">03 // PROJECTS</span>
+        <h2>Selected <span class="grad-text">Works</span></h2>
+        <p class="section-desc">Project yang saya buat untuk belajar dan mengasah kemampuan</p>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-media">
+            <div class="project-thumb p1">
+              <div class="thumb-grid"></div>
+              <div class="thumb-icon"><i class="fa-solid fa-gamepad"></i></div>
+              <span class="thumb-label">WEB GAME • THREE.JS</span>
+            </div>
+            <span class="project-no">01</span>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">WEB GAME</span>
+            <h3>BOUNCE BALL</h3>
+            <p>Game sederhana berbasis web yang dibuat untuk mempelajari JavaScript, kontrol keyboard, objek, collision,
+              dan interaksi dalam game.</p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Three.js</span>
+            </div>
+            <a href="#" class="btn-project view-project-btn" data-project="bounce">VIEW PROJECT <i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-media">
+            <div class="project-thumb p2">
+              <div class="thumb-grid"></div>
+              <div class="thumb-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <span class="thumb-label">ANDROID • JAVA</span>
+            </div>
+            <span class="project-no">02</span>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">ANDROID APPLICATION</span>
+            <h3>ANDROID SIMPLE APP</h3>
+            <p>Aplikasi Android sederhana yang dibuat untuk mempelajari pembuatan interface, input pengguna, button, dan
+              interaksi dasar menggunakan Android Studio.</p>
+            <div class="tech-tags">
+              <span>Java</span><span>XML</span><span>Android Studio</span>
+            </div>
+            <a href="#" class="btn-project view-project-btn" data-project="android">VIEW PROJECT <i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="projects-note">
+        <i class="fa-solid fa-circle-info"></i> Ganti href="#" pada tombol VIEW PROJECT dengan link GitHub / demo kamu
+        sendiri. Lihat <code>script.js</code> untuk pengaturan.
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey -->
+  <section id="journey" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">04 // LEARNING JOURNEY</span>
+        <h2>Learning <span class="grad-text">Timeline</span></h2>
+        <p class="section-desc">Perjalanan belajar saya sebagai siswa PPLG</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <span class="tl-year">2025</span>
+            <h3>Started Learning Programming</h3>
+            <p>Mulai mengenal dasar-dasar pemrograman, logika, dan struktur website dengan HTML, CSS, dan JavaScript.
+            </p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <span class="tl-year">2026</span>
+            <h3>Developing Web & Android Projects</h3>
+            <p>Membangun project web game Bounce Ball dan aplikasi Android sederhana untuk mengasah skill praktis.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <span class="tl-year">2026 — NOW</span>
+            <h3>Exploring Modern Web Technology</h3>
+            <p>Mendalami Three.js, responsive design, Git, dan teknologi modern untuk menjadi Future Developer.</p>
+            <span class="tl-badge"><span class="pulse"></span> IN PROGRESS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">05 // CONTACT</span>
+        <h2>Establish <span class="grad-text">Connection</span></h2>
+        <p class="section-desc">Tertarik berkolaborasi atau sekadar menyapa? Kirim sinyal.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info glass">
+          <div class="ci-header">
+            <span class="ci-label">[ CONTACT PROTOCOL ]</span>
+            <span class="ci-status"><span class="pulse"></span> READY TO RECEIVE</span>
+          </div>
+          <h3>RIZKY EMRALDY S</h3>
+          <p class="ci-sub">XI PPLG B • Absen 31 • PPLG STUDENT</p>
+          <div class="ci-rows">
+            <div class="ci-row"><i class="fa-solid fa-envelope"></i>
+              <div><label>Email</label><a href="#" id="emailLink">emeraldyrizky@gmail.com</a><small>Ganti di index.html
+                  & script.js</small></div>
+            </div>
+            <div class="ci-row"><i class="fa-brands fa-github"></i>
+              <div><label>GitHub</label><a href="#" id="githubLink" target="_blank"
+                  rel="noopener">github.com/gengpelukgp-lab</a><small>Ganti link GitHub kamu</small></div>
+            </div>
+            <div class="ci-row"><i class="fa-solid fa-location-dot"></i>
+              <div><label>Location</label><span>SMK — PPLG, Indonesia</span></div>
+            </div>
+          </div>
+          <div class="ci-social">
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form glass" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">NAME</label>
+              <input id="name" type="text" placeholder="Rizky Emraldy" required>
+            </div>
+            <div class="form-group">
+              <label for="email">EMAIL</label>
+              <input id="email" type="email" placeholder="email@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" rows="5" placeholder="Tulis pesanmu di sini..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full"> <span class="btn-text"><i
+                class="fa-solid fa-paper-plane"></i> SEND MESSAGE</span> <span class="btn-glow"></span></button>
+          <p class="form-hint"><i class="fa-solid fa-shield-halved"></i> Form ini hanya simulasi front-end. Tidak
+            mengirim data ke server.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-line"></div>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">RIZKY.EMRALDY</span>
+        <span>© 2026 RIZKY EMRALDY S — XI PPLG B // PPLG STUDENT</span>
+      </div>
+      <div class="footer-right">
+        <span>[ SYSTEM ONLINE ]</span>
+        <span class="footer-dot">•</span>
+        <span>BUILT WITH CODE & CURIOSITY</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">
+    <div class="toast-icon"><i class="fa-solid fa-check"></i></div>
+    <div><b>MESSAGE TRANSMITTED SUCCESSFULLY</b><span>Sinyal kamu telah diterima — akan segera direspon!</span></div>
+  </div>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
